@@ -3,20 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.3",
+    "@reduxjs/toolkit": "^1.5.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.0"
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "sequelize": "^6.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently 'npm run server' 'npm run client'",
+    "server": "nodemon api/server.js",
+    "client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "seed": "node api/seed"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -34,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
   }
 }
