@@ -20,4 +20,4 @@
 - Buscar Usuarios.
 - Ver el perfil de un usuario con sus películas favoritas.
 
-Para más información busquen en [Pledu](https://pledu.plataforma5.la/modules/e2b1ace6-8de6-4b10-a025-647583402a8a)
+Para más información busquen en [Pledu](https://pledu.plataforma5.la/bootcamp/omdb/apikey-0ed7ccdb)
