@@ -1,6 +1,6 @@
 ![logop5](https://p5-hall-of-fame.s3.amazonaws.com/p5logo.png)
 
-# 25 - OMDB
+# 25 - TMDB
 
 ### Must have.
 
