@@ -1,1 +1,1 @@
-// server configs
+// Configuración del server
