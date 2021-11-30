@@ -4,7 +4,7 @@ import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Open Movie Data Base</h1>
+    <h1>The Movie Database</h1>
   </React.StrictMode>,
   document.getElementById("root")
 );
