@@ -39,10 +39,16 @@ const Home = () => {
       <form onSubmit={handleSubmit}>
         <input {...search} type="text" placeholder="Search" />
       </form>
-      <h3>Popular movies</h3>
-      <ListItems items={popularMovies.results} />
-      <h3>Top rated movies of all time</h3>
-      <ListItems items={topRatedMovies.results} />
+      <div className="columns">
+        <div className="column is-one-half">
+          <h3>Popular movies</h3>
+          <ListItems items={popularMovies.results} />
+        </div>
+        <div className="column is-one-half">
+          <h3>Top rated movies of all time</h3>
+          <ListItems items={topRatedMovies.results} />
+        </div>
+      </div>
     </div>
   )
 }

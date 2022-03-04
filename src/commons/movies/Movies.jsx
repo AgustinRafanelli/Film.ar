@@ -31,7 +31,6 @@ const Movies = () => {
       <form className="" onSubmit={handleSubmit}>
         <input {...search} type="text" placeholder="Search"/>
       </form>
-
       <ListItems items={movies.results} />
     </div>
   )
