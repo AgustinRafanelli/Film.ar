@@ -14,12 +14,12 @@ const SideCard = ({ item }) => {
   }
 
   return (
-      <div className="movie-card">
+      <div className="card">
         <Link to={`/movie/${item.id}`}>
-          <h5>{item.title} ({item.vote_average})</h5>
+          <h5>{item.title} ({item.vote_average}/10)</h5>
           <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face${item.poster_path}`} alt="" />
         </Link>
-        <button onClick={handleClick}>corazonn't</button>
+        <button className="card-footer-it" onClick={handleClick}>corazonn't</button>
       </div>
   )
 }

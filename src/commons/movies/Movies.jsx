@@ -28,7 +28,7 @@ const Movies = () => {
 
   return (
     <div className="movies">
-      <form onSubmit={handleSubmit}>
+      <form className="" onSubmit={handleSubmit}>
         <input {...search} type="text" placeholder="Search"/>
       </form>
 

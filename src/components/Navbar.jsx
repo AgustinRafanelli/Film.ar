@@ -14,29 +14,24 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar">
-      <Link to={"/"}><h3>TMDB</h3></Link>
-      <div>
-        <div className='navegation'>
-          <Link to={"/movies"}><button>Peliculas</button></Link>
-          <Link to={"/users"}><button>Usuarios</button> </Link>
-        </div>
-        <div className='user'>
-          { user.id ? (<>
-            <Link to={`/user/${user.id}`}><span>{user.name}</span></Link>
-            <button onClick={handleClick}>Logout</button>
-          </> ) : (
-            <>
-              <Link to={'/login'}><button>Login</button></Link>
-              <Link to={'/singup'}><button>Sing Up</button></Link>
-            </>
-          )}
-          
-         
-        </div>
+    <nav className="navbar is-fixed-top has-shadow is-justify-content-space-between is-align-items-center	">
+      <Link to={"/"}><h3 className='ml-5'>TMDB</h3></Link>
+      <div className='navegation'>
+        <Link to={"/movies"}><button className='mx-1'>Peliculas</button></Link>
+        <Link to={"/users"}><button className='mx-1' >Usuarios</button> </Link>
       </div>
-      
-    </div>
+      <div className='user mr-5'>
+        { user.id ? (<>
+          <Link to={`/user/${user.id}`}><span>{user.name}</span></Link>
+          <button className='ml-2' onClick={handleClick}>Logout</button>
+        </> ) : (
+          <>
+            <Link to={'/login'}><button className='mx-1'>Login</button></Link>
+            <Link to={'/singup'}><button className='mx-1'> Sing Up</button></Link>
+          </>
+        )}
+      </div>
+    </nav>
   )
 }
 

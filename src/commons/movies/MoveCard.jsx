@@ -11,15 +11,16 @@ const MovieCard = ({ item }) => {
     axios.post(`/api/favorites?userId=${user.id}`, { name: item.title, movieId: item.id})
       .then(()=> dispatch(addFavorites(user.id)))
       .catch(err=> console.log(err))
-  }
+  } 
 
   return (
-      <div className="movie-card">
-      <Link to={`/movie/${item.id}`}>
-        <h4>{item.title} ({item.vote_average})</h4>
-        <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${item.poster_path}`} alt="" />
-      </Link>
-      { user.id ? <button onClick={handleClick}>corazon</button> : <></>}
+    
+      <div className="card">
+        <Link to={`/movie/${item.id}`}>
+          <h4>{item.title} ({item.vote_average}/10)</h4>
+          <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face${item.poster_path}`} alt="" />
+        </Link>
+      {user.id ? <button className="card-footer-item " onClick={handleClick}>corazon</button> : <></>}
       </div>
   )
 }

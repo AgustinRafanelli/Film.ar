@@ -7,17 +7,19 @@ const ListItems = ({items, isSide = false}) => {
   const path = useParams()['*']
   
   return (
-    <ul>
-      {items.map((item, i)=> {
-        return (isSide ? (<li key={i} ><SideCard item={item} /> </li> ) : (
-          path === 'users' ? (
-            <li key={i}> <UserCard item={item} /> </li>
-          ) : (
-            <li key={i}> <MovieCard item={item} /></li>
-          ))
-        ) 
-      })}
-    </ul>
+    <div className="column">
+      <div className='column is-variable' >
+        {items.map((item, i)=> {
+          return (isSide ? (<SideCard item={item} /> ) : (
+            path === 'users' ? (
+              <UserCard item={item} />
+            ) : (
+              <MovieCard item={item} />
+            ))
+          ) 
+        })}
+      </div>
+    </div>
   )
 }
 

@@ -4,10 +4,10 @@ const UserCard = ({ item }) => {
 
   return (
     <Link to={`/user/${item.id}`}>
-      <div className="user-card">
-        <h4>{item.name}</h4>
+      <div className="card">
+        <h3>{item.name}</h3>
         <p>{item.email}</p>
-        <p>{item.favCount} Favoritos</p>
+        <p className="card-footer-it">{item.favCount} Favoritos</p>
       </div>
     </Link>
   )

@@ -10,7 +10,7 @@ router.get('/', (req, res, next)=>{
 
 router.get('/:id', (req, res, next)=> {
   User.findOne({where: {id: req.params.id}})
-    .then(user => res.status(204).send({
+    .then(user => res.send({
       id: user.id,
       name: user.name,
       email: user.email,

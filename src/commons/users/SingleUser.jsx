@@ -25,13 +25,14 @@ const SingleUser = () => {
       .catch(err => console.log(err))
   }, [id])
 
+  console.log(favorites, user.id)
   if(!user.id || !favorites) return <></>
 
   return (
     <div className="single-user">
-      <h2>{user.name}</h2>
+      <h2 className="title">{user.name}</h2>
       <ul>
-        <h3>Favoritos</h3>
+        <h3>Favoritos de {user.name}</h3>
         <ListItems items={favorites}/>
       </ul>
     </div>

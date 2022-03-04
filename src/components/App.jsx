@@ -26,15 +26,17 @@ const App = ()=>{
   return(
     <>
       <Navbar />
-      <div>
+      <div className='columns section mt-4' >
         {user.id ? <Sidebar /> : <></>}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/singup" element={<SingUp/>} />
-          <Route path="/*" element={<Content/>}/>
-          <Route path='/404' element={<h1>Pagina no encontrada</h1>} />
-        </Routes>
+        <div className=' column is-four-fifth'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/singup" element={<SingUp />} />
+            <Route path="/*" element={<Content />} />
+            <Route path='/404' element={<h1>Pagina no encontrada</h1>} />
+          </Routes>
+        </div>
       </div>
     </>
   )

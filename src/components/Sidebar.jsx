@@ -24,10 +24,11 @@ const Sidebar = () => {
   if(!favorites) return <></>
   
   return (
-    <div className="sidebar">
-      {console.log(favorites)}
-      <h4>Tus Favoritos</h4>
-      <ListItems items={favorites} isSide={true}/>
+    <div className="column is-one-fifth">
+      <aside className="menu  ">
+        <h4>Tus Favoritos</h4>
+        <ListItems items={favorites} isSide={true} />
+      </aside>
     </div>
   )
 }
