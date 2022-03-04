@@ -1,10 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import "./styles.css"
+import App from "./components/App"
+import {Provider} from "react-redux"
+import store from "./state/store"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>The Movie Database</h1>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
+  ,
   document.getElementById("root")
 );
