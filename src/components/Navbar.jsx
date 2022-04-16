@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar is-fixed-top has-shadow is-justify-content-space-between is-align-items-center	">
-      <Link to={"/"}><h3 className='ml-5'>TMDB</h3></Link>
+      <Link to={"/"}><h3 className='ml-5'>Film.ar</h3></Link>
       <div className='navegation'>
         <Link to={"/movies"}><button className='mx-1'>Peliculas</button></Link>
         <Link to={"/users"}><button className='mx-1' >Usuarios</button> </Link>

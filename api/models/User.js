@@ -40,7 +40,7 @@ User.prototype.plus = function (){
   return this
 }
 
-User.beforeCreate((user =>{
+User.beforeCreate(user =>{
   return bcrypt
     .genSalt(16)
     .then(salt=>{
@@ -48,6 +48,6 @@ User.beforeCreate((user =>{
       return user.hash(user.password, user.salt)
     })
     .then(hash => user.password = hash)
-}))
+})
 
 module.exports = User 
